@@ -1,4 +1,4 @@
-from ._anvil_designer import register_formTemplate
+from ._anvil_designer import reg_pageTemplate
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -6,7 +6,7 @@ from anvil.tables import app_tables
 import anvil.server
 
 
-class register_form(register_formTemplate):
+class reg_page(reg_pageTemplate):
   def __init__(self, **properties):
     # Set Form Properties and Data Bindings.
     self.init_components(**properties)
@@ -34,4 +34,4 @@ class register_form(register_formTemplate):
     # Clear our three text boxes
     self.Username_box.text = ""
     self.email_box.text = ""
-    self.passward_box.text = ""
+    self.password_box.text = ""
