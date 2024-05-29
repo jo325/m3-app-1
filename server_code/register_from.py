@@ -11,7 +11,7 @@ def register_admin(self, **event_args):
   password = self.password_box.text
 
   # Add a new row to the Admins table
-  new_row = app_tables.admins.add_row(username=username, email=email, password=password)
+  new_row = app_tables.register.add_row(username=username, email=email, password=password)
 
   # Display a success message or perform any additional actions
   print("Admin registered successfully!")
