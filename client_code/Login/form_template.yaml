@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_spacing: medium}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -17,22 +17,24 @@ components:
     type: RichText
     layout_properties: {grid_position: 'ABGTAZ,JHVTRO'}
     components:
-    - name: text_box_1
+    - name: username_or_email_textbox
       properties: {}
       type: TextBox
-      layout_properties: {width: 857.199951171875}
+      layout_properties: {width: 915.5999755859375}
   - name: rich_text_2
     properties: {content: '*password'}
     type: RichText
     layout_properties: {grid_position: 'WAPITW,KCTXZC'}
     components:
-    - name: text_box_2
+    - name: password_textbox
       properties: {}
       type: TextBox
-  - name: button_1
-    properties: {text: button_1, role: outlined-button, icon: 'fa:arrow-right', icon_align: right}
+      layout_properties: {width: 918.7999267578125}
+  - name: login
+    properties: {text: login, role: outlined-button, icon: 'fa:arrow-right', icon_align: right}
     type: Button
     layout_properties: {grid_position: 'ZJZZAT,WCVYVF'}
+    event_bindings: {click: login_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

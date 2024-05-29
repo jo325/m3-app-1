@@ -51,6 +51,11 @@ components:
     type: Button
     layout_properties: {grid_position: 'PGQUAV,WXQEXE'}
     event_bindings: {click: register_click}
+  - name: login_s
+    properties: {text: login}
+    type: Button
+    layout_properties: {grid_position: 'PGQUAV,TRPLKE'}
+    event_bindings: {click: login_s_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

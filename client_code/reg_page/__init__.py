@@ -24,6 +24,7 @@ class reg_page(reg_pageTemplate):
     success = anvil.server.call('register_form', username, email, password)
     if success:
       alert("Admin registered successfully!")
+      open_form('Login')
     else:
       alert("Registration failed. Admin may already exist.")
     
@@ -35,3 +36,8 @@ class reg_page(reg_pageTemplate):
     self.Username_box.text = ""
     self.email_box.text = ""
     self.password_box.text = ""
+
+  def login_s_click(self, **event_args):
+    open_form('Login')
+    """This method is called when the button is clicked"""
+    
