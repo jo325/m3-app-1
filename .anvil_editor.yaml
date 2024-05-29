@@ -1,8 +1,11 @@
 unique_ids:
   forms:
-    Form1: S2JD6LTNCBJX6RVJBZVQQ25AQRR3GVWI
+    login: '1716955596115424285044459.64087'
+    register_form: S2JD6LTNCBJX6RVJBZVQQ25AQRR3GVWI
   modules: {}
-  server_modules: {}
+  server_modules:
+    login_from: '1716957481485110967494751.0475'
+    register_from: '1716957460307792653357594.9224'
   assets:
     standard-page.html: AAJ774JDUJ62FUJQQK4DJ3C44PETDF76
     theme.css: NJNLQGUKILDW543KTOMHQABKKYM5O7NZ

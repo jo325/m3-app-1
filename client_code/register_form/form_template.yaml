@@ -1,0 +1,58 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: label_1
+    properties: {align: center, text: Register, bold: true, italic: false, icon: 'fa:registered',
+      font_size: 27}
+    type: Label
+    layout_properties: {grid_position: 'VERQDR,GJDSVS', full_width_row: false, row_background: ''}
+  - name: rich_text_1
+    properties: {content: '*Username', visible: true}
+    type: RichText
+    layout_properties: {grid_position: 'VRKKKV,MPMNFM'}
+    components:
+    - name: Username_box
+      properties:
+        align: left
+        role: [outlined]
+        hide_text: false
+        placeholder: '-'
+      type: TextBox
+      layout_properties: {width: 710.7999267578125}
+  - name: rich_text_2
+    properties: {content: '*email id'}
+    type: RichText
+    layout_properties: {grid_position: 'IAOVQL,WDZRXM'}
+    components:
+    - name: email_box
+      properties: {role: outlined, type: email, placeholder: '-'}
+      type: TextBox
+      layout_properties: {width: 711.199951171875}
+  - name: rich_text_3
+    properties: {content: '*passward'}
+    type: RichText
+    layout_properties: {grid_position: 'THGAPF,JYFUSF'}
+    components:
+    - name: passward_box
+      properties: {role: outlined, placeholder: '-'}
+      type: TextBox
+      layout_properties: {width: 710.5999755859375}
+  - name: submit
+    properties:
+      text: register
+      bold: true
+      role: [elevated-button, tonal-button]
+      icon: fa:angle-double-right
+    type: Button
+    layout_properties: {grid_position: 'PGQUAV,WXQEXE'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
