@@ -8,7 +8,7 @@ import anvil.server
 
 class register_form(register_formTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
+    # Set Form Properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
@@ -18,15 +18,17 @@ class register_form(register_formTemplate):
     username= self.Username_box.text
     email= self.email_box.text
     password= self.password_box.text
-
-    anvil.server.call('register_form', username, email, password)
-    Notification("Register submitted!").show()
-  # Add a new row to the Admins table
-   
-
-  # Display a success message or perform any additional actions
+    if not username or not email or not password:
+            alert("All fields are required!")
+            return
+    success = anvil.server.call('register_form', username, email, password)
+    if success:
+      alert("Admin registered successfully!")
+    else:
+      alert("Registration failed. Admin may already exist.")
+    
     self.clear_inputs()
-    print("Admin registered successfully!")
+   
      
   def clear_inputs(self):
     # Clear our three text boxes

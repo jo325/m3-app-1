@@ -22,6 +22,8 @@ components:
       properties: {align: left, role: outlined-error, hide_text: false, placeholder: '-'}
       type: TextBox
       layout_properties: {width: 710.7999267578125}
+      data_bindings:
+      - {property: tag, code: 'self.item[''username'']', writeback: false}
   - name: rich_text_2
     properties: {content: '*email id'}
     type: RichText

@@ -8,9 +8,3 @@ import anvil.server
 def register_form(username,email,password):
   # Get the form data
    
-   app_tables.register.send_row(
-    username=username, 
-    email=email, 
-    password=password 
-  )
- 
