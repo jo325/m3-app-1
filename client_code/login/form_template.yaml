@@ -9,9 +9,30 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {align: center, bold: true, text: Login}
+    properties: {align: center, bold: true, text: Login, icon: 'fa:cloud', font_size: 30}
     type: Label
     layout_properties: {grid_position: 'QZBHPK,RQSBNM'}
+  - name: rich_text_1
+    properties: {content: '*username/email', align: left}
+    type: RichText
+    layout_properties: {grid_position: 'ABGTAZ,JHVTRO'}
+    components:
+    - name: text_box_1
+      properties: {}
+      type: TextBox
+      layout_properties: {width: 857.199951171875}
+  - name: rich_text_2
+    properties: {content: '*password'}
+    type: RichText
+    layout_properties: {grid_position: 'WAPITW,KCTXZC'}
+    components:
+    - name: text_box_2
+      properties: {}
+      type: TextBox
+  - name: button_1
+    properties: {text: button_1, role: outlined-button, icon: 'fa:arrow-right', icon_align: right}
+    type: Button
+    layout_properties: {grid_position: 'ZJZZAT,WCVYVF'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
