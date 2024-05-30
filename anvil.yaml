@@ -28,4 +28,21 @@ db_schema:
       admin_ui: {order: 2, width: 200}
       type: string
     title: admin
+  menu_item:
+    client: none
+    server: full
+    columns:
+    - name: nametag
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: decription
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: price
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: image
+      admin_ui: {width: 200, order: 3}
+      type: media
+    title: menu item
 renamed: true

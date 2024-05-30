@@ -1,0 +1,37 @@
+container: {type: ColumnPanel}
+components:
+- name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'UVQWJM,XYHQBQ'}
+  components:
+  - name: image_fileloader
+    properties: {}
+    type: FileLoader
+    layout_properties: {grid_position: 'OAJLER,BNYWXP'}
+  - name: nametag_box
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'OAJLER,JOPUBE'}
+  - name: price_box
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'OAJLER,VREBJP'}
+  - name: description_box
+    properties: {}
+    type: TextArea
+    layout_properties: {grid_position: 'QQEHGO,CMLERQ'}
+  - name: save_box
+    properties: {text: save_it}
+    type: Button
+    layout_properties: {grid_position: 'JTBTOH,EWPTRU'}
+    event_bindings: {click: save_box_click}
+- name: linear_panel_1
+  properties: {}
+  type: LinearPanel
+  layout_properties: {grid_position: 'IMRLLT,KWDJZF'}
+- name: flow_panel_1
+  properties: {}
+  type: FlowPanel
+  layout_properties: {grid_position: 'IJWMZQ,KMCKJB'}
+is_package: true
