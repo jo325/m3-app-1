@@ -1,3 +1,25 @@
 container: {type: ColumnPanel}
-components: []
+components:
+- name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'VJCJUG,XBZGCK'}
+  components:
+  - name: label_1
+    properties: {align: center, text: Restaurants Menu Page, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'IJLYVF,QSTTGR'}
+- name: outlined_card_2
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'AVFWII,FGQYPY'}
+  components:
+  - name: rich_text_1
+    properties: {content: Main Course}
+    type: RichText
+    layout_properties: {grid_position: 'HNCYJD,RBPWCJ'}
+  - name: outlined_button_1
+    properties: {text: +, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'HNCYJD,VYILAH'}
 is_package: true

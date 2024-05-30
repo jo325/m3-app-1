@@ -3,7 +3,8 @@ unique_ids:
     Login: '1716955596115424285044459.64087'
     MainPage: '1716989511110402496430892.58936'
     reg_page: S2JD6LTNCBJX6RVJBZVQQ25AQRR3GVWI
-  modules: {}
+  modules:
+    MainPage.AdminForm: '1717078723819752827342840.5519'
   server_modules:
     register_from: '1716957460307792653357594.9224'
   assets:
