@@ -28,21 +28,21 @@ db_schema:
       admin_ui: {order: 2, width: 200}
       type: string
     title: admin
-  menu_item:
+  add_menu_item:
     client: none
     server: full
     columns:
     - name: nametag
       admin_ui: {width: 200, order: 0}
       type: string
-    - name: decription
-      admin_ui: {width: 200, order: 1}
+    - name: description
+      admin_ui: {order: 1, width: 200}
       type: string
     - name: image
       admin_ui: {width: 200, order: 3}
       type: media
     - name: price
-      admin_ui: {width: 200, order: 4}
-      type: string
-    title: menu item
+      admin_ui: {order: 5, width: 200}
+      type: number
+    title: add_menu_item
 renamed: true

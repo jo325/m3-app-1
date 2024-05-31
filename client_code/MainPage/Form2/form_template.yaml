@@ -1,0 +1,29 @@
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'DMNWTU,CATHYK'}
+  components:
+  - name: name_box
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'FFZETR,QHWAUH'}
+  - name: image_fileloader
+    properties: {}
+    type: FileLoader
+    layout_properties: {grid_position: 'MCGJOV,VUTAMR'}
+  - name: price_box
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'MCGJOV,AHBNDF'}
+  - name: description_textarea
+    properties: {}
+    type: TextArea
+    layout_properties: {grid_position: 'MQLYLP,WERIPG'}
+  - name: save_box
+    properties: {text: save, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'YQASQD,AVRBBK'}
+    event_bindings: {click: save_box_click}
+is_package: true

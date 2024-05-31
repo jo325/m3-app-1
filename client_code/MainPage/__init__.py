@@ -19,4 +19,4 @@ class MainPage(MainPageTemplate):
 
   def update_box_click(self, **event_args):
     
-    open_form('MainPage.temp1')
+    open_form('MainPage.Form2')
