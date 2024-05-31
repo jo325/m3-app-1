@@ -38,11 +38,11 @@ db_schema:
     - name: decription
       admin_ui: {width: 200, order: 1}
       type: string
-    - name: price
-      admin_ui: {width: 200, order: 2}
-      type: number
     - name: image
       admin_ui: {width: 200, order: 3}
       type: media
+    - name: price
+      admin_ui: {width: 200, order: 4}
+      type: string
     title: menu item
 renamed: true

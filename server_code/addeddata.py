@@ -8,5 +8,5 @@ import anvil.server
 @anvil.server.callable
 def add_item(name, description, price, image):
     # Add the new item to the Items table
-    app_tables.items.add_row(name=name, description=description, price=price, image=image)
+    app_tables.menu_item.add_row(name=name, description=description, image=image,price=price)
 
