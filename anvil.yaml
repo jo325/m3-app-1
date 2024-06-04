@@ -50,4 +50,21 @@ db_schema:
       admin_ui: {order: 5, width: 200}
       type: number
     title: add_menu_item
+  product:
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: price2
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: description2
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: imag
+      admin_ui: {order: 3, width: 200}
+      type: media
+    title: Product
 renamed: true

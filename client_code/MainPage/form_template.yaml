@@ -14,4 +14,9 @@ components:
   type: Button
   layout_properties: {grid_position: 'IVUDFE,UYTICN'}
   event_bindings: {click: update_box_click}
+- name: view
+  properties: {text: viewplane, role: filled-button}
+  type: Button
+  layout_properties: {grid_position: 'TFIJEQ,FMFEUO'}
+  event_bindings: {click: view_click}
 is_package: true

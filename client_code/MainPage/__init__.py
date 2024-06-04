@@ -13,10 +13,11 @@ class MainPage(MainPageTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def add_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
 
   def update_box_click(self, **event_args):
     
     open_form('MainPage.Form2')
+
+  def view_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('order_syst')
