@@ -49,6 +49,10 @@ roles:
   components: [TextBox, TextArea, DatePicker, DropDown]
 - name: input-error
   components: [TextBox, TextArea, DatePicker, DropDown]
+- name: header
+  components: [image]
+  display_in_toolbox: true
+  title: image
 color_scheme:
   preset_groups:
   - name: Colour Scheme

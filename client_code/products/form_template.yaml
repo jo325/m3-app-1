@@ -1,0 +1,44 @@
+container: {type: ColumnPanel}
+components:
+- name: image_1
+  properties: {}
+  type: Image
+  layout_properties: {grid_position: 'YJBWBR,TRUJNW'}
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'PODPIQ,UVOVAZ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']', writeback: false}
+- name: label_2
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'NZMMUL,FPFLIO'}
+  data_bindings:
+  - {property: text, code: 'f"${self.item[''price'']}"', writeback: false}
+- name: label_3
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'SWLCKZ,FHONNH'}
+  data_bindings:
+  - {property: text, code: 'self.item[''description'']', writeback: false}
+- name: add_button
+  properties: {text: ADD TO CART, bold: true, role: filled-button, background: 'theme:On
+      Primary Container'}
+  type: Button
+  layout_properties: {grid_position: 'INFSHH,GCFYNO'}
+- name: increment_button
+  properties: {text: +, role: filled-button, bold: true}
+  type: Button
+  layout_properties: {grid_position: 'INFSHH,JQLDLK'}
+  event_bindings: {click: increment_button_click}
+- name: counter_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'INFSHH,EBNQOJ'}
+- name: decrement_button
+  properties: {text: '-', bold: true, role: filled-button}
+  type: Button
+  layout_properties: {grid_position: 'INFSHH,ERCOUR'}
+  event_bindings: {click: decrement_button_click}
+is_package: true
