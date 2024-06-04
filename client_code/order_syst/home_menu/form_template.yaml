@@ -1,0 +1,16 @@
+layout: {type: 'form:order_syst'}
+is_package: true
+components_by_slot:
+  slot_1:
+  - name: label_1
+    properties: {text: menu}
+    type: Label
+    layout_properties: {}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {}
