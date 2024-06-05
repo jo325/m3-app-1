@@ -26,5 +26,10 @@ class Product(ProductTemplate):
     self.counter_value -= 1
     self.counter_label.text = str(self.counter_value)
     # Save the new counter value to the database
+
+  def add_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+  
     
    
