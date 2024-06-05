@@ -10,13 +10,21 @@ class Product(ProductTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.counter_value = 0
+    self.counter_label.text = str(self.counter_value)
 
     # Any code you write here will run before the form opens.
 
   def increment_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    self.counter_value += 1
+    self.counter_label.text = str(self.counter_value)
+    # Save the new counter value to the database
+    
+   
 
   def decrement_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    self.counter_value -= 1
+    self.counter_label.text = str(self.counter_value)
+    # Save the new counter value to the database
+    
+   

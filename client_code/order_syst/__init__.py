@@ -10,9 +10,10 @@ class order_syst(order_systTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    products = app_tables.products.search()
+    
+    products = app_tables.product.search()
     for p in products:
-      self.flow_panel_1.add_component(Product(item=p), width='30%')
+      self.flow_panel_1.add_component(Product(item=p), width='40%')
 
 
 
