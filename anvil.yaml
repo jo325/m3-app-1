@@ -67,4 +67,15 @@ db_schema:
       admin_ui: {order: 3, width: 200}
       type: media
     title: Product
+  orders:
+    client: none
+    server: full
+    columns:
+    - name: order
+      admin_ui: {width: 200, order: 0}
+      type: simpleObject
+    - name: total_amount
+      admin_ui: {width: 200, order: 1}
+      type: number
+    title: orders
 renamed: true

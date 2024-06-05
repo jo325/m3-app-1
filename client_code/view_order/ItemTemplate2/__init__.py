@@ -14,7 +14,7 @@ class ItemTemplate2(ItemTemplate2Template):
     # Any code you write here will run before the form opens.
 
   def delete_button_click(self, **event_args):
-    get_open_form().view_items.remove(self.item)
-    get_open_form().view_link_click()
+    get_open_form().view_order_items.remove(self.item)
+    get_open_form().view_order_link_click()
     """This method is called when the button is clicked"""
     

@@ -18,16 +18,16 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'LTSVWO,FVGEAL'}
 - name: column_panel_2
-  properties: {}
+  properties: {col_widths: '{"VHDPUS":40,"VNSJIN":20,"NWWUJQ":35,"TQOQIP":2,"REFTET":23}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'NUKKUC,VYVXIH'}
+  layout_properties: {grid_position: 'UKOCEI,OAIBIZ'}
   components:
   - name: label_2
-    properties: {}
+    properties: {text: my order, bold: true, role: headline}
     type: Label
     layout_properties: {grid_position: 'IDZTZK,VHDPUS'}
   - name: label_3
-    properties: {}
+    properties: {text: total, bold: true, role: headline, align: left}
     type: Label
     layout_properties: {grid_position: 'IDZTZK,VNSJIN'}
   - name: repeating_panel_1

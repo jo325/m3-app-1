@@ -28,7 +28,7 @@ class Product(ProductTemplate):
     # Save the new counter value to the database
 
   def add_button_click(self, **event_args):
-    if self.quantity_box.text:
+    if self.counter_label.text:
       get_open_form().Product(self.item, self.counter_label.text)
       self.counter_label.text = ""
       self.add_button.visible = True
