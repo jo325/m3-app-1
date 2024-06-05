@@ -1,0 +1,49 @@
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'VQDMPX,PNZRES'}
+  components:
+  - name: label_1
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'CLLBCS,TFFZFY'}
+  - name: outlined_button_1
+    properties: {text: food order place, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'WXXGVK,RXXIQR'}
+  - name: spacer_1
+    properties: {height: 133.19998168945312}
+    type: Spacer
+    layout_properties: {grid_position: 'LTSVWO,FVGEAL'}
+- name: column_panel_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'NUKKUC,VYVXIH'}
+  components:
+  - name: label_2
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'IDZTZK,VHDPUS'}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'IDZTZK,VNSJIN'}
+  - name: repeating_panel_1
+    properties: {item_template: view_order.ItemTemplate2}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'GIRCYZ,NWWUJQ'}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'GIRCYZ,TQOQIP'}
+  - name: column_panel_3
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'GIRCYZ,REFTET'}
+- name: spacer_3
+  properties: {height: -126.60003662109375}
+  type: Spacer
+  layout_properties: {grid_position: 'ENHJDQ,CFKLOA'}
+is_package: true
