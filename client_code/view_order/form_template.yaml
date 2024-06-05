@@ -31,13 +31,15 @@ components:
     type: Label
     layout_properties: {grid_position: 'IDZTZK,VNSJIN'}
   - name: repeating_panel_1
-    properties: {item_template: view_order.ItemTemplate2}
+    properties: {item_template: view_order.ItemTemplate2, role: outlined-card}
     type: RepeatingPanel
     layout_properties: {grid_position: 'GIRCYZ,NWWUJQ'}
   - name: spacer_2
-    properties: {height: 32}
+    properties: {height: '32', spacing_above: small, visible: true}
     type: Spacer
     layout_properties: {grid_position: 'GIRCYZ,TQOQIP'}
+    data_bindings:
+    - {property: height, code: 'self.item['''']', writeback: false}
   - name: column_panel_3
     properties: {}
     type: ColumnPanel
