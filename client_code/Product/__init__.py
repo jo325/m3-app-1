@@ -31,15 +31,15 @@ class Product(ProductTemplate):
   def add_button_click(self, **event_args):
     item_data = {
             'name': self.item['name'],
-            'image': self.item['image'],
-            'price': self.item['price'],
-            'counter': self.counter
+            'image': self.item['imag'],
+            'price': self.item['price2'],
+            'counter': self.counter_value
         }
     
     cart_items.append(item_data)
         # Reset count after adding to cart
     self.count = 0
-    self.label_count.text = str(self.count)
+    self.counter_label.text = str(self.count)
     
     
   

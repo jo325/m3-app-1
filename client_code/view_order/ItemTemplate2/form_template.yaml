@@ -23,7 +23,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'GHIACB,WXEITF IZIOQY,DIUUUP'}
     data_bindings:
-    - {property: text, code: 'f"${self.item[''product''][''price2''] * self.item[''counter_label'']}"',
+    - {property: text, code: 'f"${self.item[''product''][''price2''] * self.item[''counter_value'']}"',
       writeback: false}
   - name: label_2
     properties: {}
@@ -42,5 +42,5 @@ components:
     type: Label
     layout_properties: {grid_position: 'GHIACB,WXEITF CQZHKX,VAHHGA'}
     data_bindings:
-    - {property: text, code: 'self.item[''counter_label'']', writeback: false}
+    - {property: text, code: 'self.item[''counter_value'']', writeback: false}
   data_bindings: []
