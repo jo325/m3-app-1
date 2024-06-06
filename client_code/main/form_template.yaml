@@ -7,7 +7,16 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: spacer_1
+    properties: {height: 81.19998168945312}
+    type: Spacer
+    layout_properties: {grid_position: 'CWBUXZ,MACMXS'}
+  - name: order_now
+    properties: {text: order now}
+    type: Button
+    layout_properties: {grid_position: 'YCKVJZ,DQLTCO'}
+    event_bindings: {click: order_now_click}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
@@ -21,6 +30,10 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - name: update_panel
+    properties: {text: update}
+    type: Button
+    event_bindings: {click: update_panel_click}
   - name: view_cart
     properties: {role: selected, background: 'theme:On Primary Container', foreground: ''}
     type: Link

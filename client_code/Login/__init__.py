@@ -26,7 +26,7 @@ class Login(LoginTemplate):
     if success:
        alert("Login successful!")
             # Navigate to the admin dashboard or main page
-       open_form('MainPage')  # Replace 'MainPage' with your main form
+       open_form('main')  # Replace 'MainPage' with your main form
     else:
         alert("Login failed. Please check your credentials.")
     """This method is called when the button is clicked"""

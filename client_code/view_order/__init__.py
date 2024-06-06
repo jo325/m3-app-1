@@ -10,14 +10,13 @@ class view_order(view_orderTemplate):
   def __init__(self,items, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.order = []
-    self.items = items
 
-    if not self.items:
-      self.empty_cart_panel.visible = True
-      self.column_panel_1.visible = False
-    
-    self.repeating_panel_1.items = self.items
-    
+    cart_items = anvil.server.call('get_cart_items')
 
-    # Any code you write here will run before the form opens.
+        # Display the items
+    for item in cart_items:
+       self.empty_cart_panel.visible = True
+       self.column_panel_1.visible = False
+     self.repeating_panel_1.items = cart_items
+
+    

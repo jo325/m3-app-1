@@ -28,22 +28,16 @@ class Product(ProductTemplate):
     # Save the new counter value to the database
 
   def add_button_click(self, **event_args):
+    item_data = {
+            'name': self.item['name'],
+            'image': self.item['image'],
+            'price': self.item['price'],
+            'counter': self.counter
+        }
+        
+        # Store the data in a data table (assume 'CartItems' table exists)
+    anvil.server.call('add_to_cart', item_data)
     
-     if self.counter_label.text:
-      get_open_form().Product(self.item, self.counter_label.text)
-      self.counter_label.text = ""
-      self.add_button.visible = True
-      self.timer_1.interval = 1
-     else:
-        self.counter_label.text = ""
-        Notification("Please specify a quantity").show()
-
-
-  def timer_1_tick(self, **event_args):
-    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
-    self.add_button.visible = True
-    self.added_button.visible = False
-    self.timer_1.interval = 0
     
   
     

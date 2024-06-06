@@ -14,6 +14,14 @@ class main(mainTemplate):
     # Any code you write here will run before the form opens.
 
   def view_cart_click(self, **event_args):
-     open_form('view_order')
-     """This method is called when the link is clicked"""
+    open_form('view_order')
+  
+
+  def order_now_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('order_syst')
+
+  def update_panel_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('main.Form2')
     
