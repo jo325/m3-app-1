@@ -14,3 +14,6 @@ def add_menu_item(name, description, price, image):
     )
 
 
+@anvil.server.callable
+def get_products():
+  return app_tables.product.search()

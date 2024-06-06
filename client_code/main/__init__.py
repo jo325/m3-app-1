@@ -19,7 +19,7 @@ class main(mainTemplate):
 
   def order_now_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('order_syst')
+    open_form('order_system')
 
   def update_panel_click(self, **event_args):
     """This method is called when the button is clicked"""

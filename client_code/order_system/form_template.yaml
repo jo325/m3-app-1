@@ -1,0 +1,53 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {grid_position: 'BMUMAT,VGFTPZ'}
+    components:
+    - name: image_1
+      properties: {source: _/theme/OIP.jpeg, display_mode: zoom_to_fill, height: 269.1999816894531}
+      type: Image
+      layout_properties: {width: 659.1879877929687}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: view
+    properties: {text: view_cart, icon: 'fa:cart-arrow-down', role: selected}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: view_click}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: maincourse
+    properties: {text: main course}
+    type: Link
+    layout_properties: {grid_position: 'MVKJND,IEFIZQ'}
+    event_bindings: {click: maincourse_click}
+  - name: stater
+    properties: {text: staters}
+    type: Link
+    layout_properties: {grid_position: 'UMROSY,MCZTTW'}
+    event_bindings: {click: stater_click}
+- name: label_1
+  properties: {text: restaurant order, bold: true}
+  type: Label
+  layout_properties: {slot: title}
+slots:
+  slot_1:
+    index: 1
+    set_layout_properties: {grid_position: 'LEEAPL,MAPFRK'}
+    target: {type: container, name: content_panel}
