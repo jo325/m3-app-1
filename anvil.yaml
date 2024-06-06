@@ -14,8 +14,9 @@ runtime_options:
   version: 3
   client_version: '3'
   server_version: python3-sandbox
-  server_spec: {base: python310-minimal}
+  server_spec: null
   legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
+  server_spec_disabled: {requirements: '', base: python310-minimal}
 startup_form: null
 native_deps: null
 db_schema:
