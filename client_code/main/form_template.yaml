@@ -1,0 +1,28 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components: []
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+- name: label_1
+  properties: {text: restaurant order system}
+  type: Label
+  layout_properties: {slot: title}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: view_cart
+    properties: {role: selected, background: 'theme:On Primary Container', foreground: ''}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: view_cart_click}
