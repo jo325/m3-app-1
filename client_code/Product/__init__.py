@@ -4,12 +4,13 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+cart_items = []
 
 class Product(ProductTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+  
     self.counter_value = 0
     self.counter_label.text = str(self.counter_value)
 
@@ -34,9 +35,11 @@ class Product(ProductTemplate):
             'price': self.item['price'],
             'counter': self.counter
         }
-        
-        # Store the data in a data table (assume 'CartItems' table exists)
-    anvil.server.call('add_to_cart', item_data)
+    
+    cart_items.append(item_data)
+        # Reset count after adding to cart
+    self.count = 0
+    self.label_count.text = str(self.count)
     
     
   
