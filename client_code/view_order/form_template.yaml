@@ -18,7 +18,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'LTSVWO,FVGEAL'}
 - name: column_panel_2
-  properties: {col_widths: '{"VHDPUS":40,"VNSJIN":20,"NWWUJQ":35,"TQOQIP":2,"REFTET":23}'}
+  properties: {col_widths: '{"VHDPUS":40,"VNSJIN":20,"NWWUJQ":35,"TQOQIP":5,"REFTET":20}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'UKOCEI,OAIBIZ'}
   components:
@@ -31,7 +31,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'IDZTZK,VNSJIN'}
   - name: repeating_panel_1
-    properties: {item_template: view_order.ItemTemplate2, role: outlined-card}
+    properties: {item_template: view_order.ItemTemplate2, role: null}
     type: RepeatingPanel
     layout_properties: {grid_position: 'GIRCYZ,NWWUJQ'}
   - name: spacer_2
