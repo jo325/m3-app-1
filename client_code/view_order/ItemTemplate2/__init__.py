@@ -10,7 +10,7 @@ class ItemTemplate2(ItemTemplate2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
+    self.set_event_handler('x-getattr', self.item_event_handler)
     # Any code you write here will run before the form opens.
 
   def delete_button_click(self, **event_args):
@@ -19,7 +19,7 @@ class ItemTemplate2(ItemTemplate2Template):
     """This method is called when the button is clicked"""
     
 
-  def set_data_bindings(self, **event_args):
+  def item_event_handler(self, **event_args):
         self.label_name.text = self.item['product']['name']
         self.image_1.source = self.item['product']['img']
         self.label_price.text = f"${self.item['product']['price']}"

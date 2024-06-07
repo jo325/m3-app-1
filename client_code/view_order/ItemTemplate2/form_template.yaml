@@ -4,12 +4,12 @@ container:
   properties: {role: null, border: ''}
 components:
 - name: column_panel_1
-  properties: {border: 2px 0px, foreground: ''}
+  properties: {border: 2px 0px, foreground: '', col_widths: '{"MWVFOV":30,"WXEITF":30,"BKOLCK":20}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'VABYVF,ZSVNOP'}
   components:
   - name: image_1
-    properties: {height: 161.60000610351562}
+    properties: {height: 120.79998779296875}
     type: Image
     layout_properties: {grid_position: 'GHIACB,MWVFOV'}
   - name: label_name
@@ -27,15 +27,15 @@ components:
     type: Label
     layout_properties: {grid_position: 'GHIACB,WXEITF XHVYOE,MECFTR'}
     data_bindings: []
-  - name: delete_button
-    properties: {text: '', icon: 'fa:trash-o', align: right, bold: true, font_size: 24}
-    type: Button
-    layout_properties: {grid_position: 'GHIACB,WXEITF XHVYOE,HSNYIS'}
-    data_bindings: []
-    event_bindings: {click: delete_button_click}
   - name: label_counter
     properties: {}
     type: Label
     layout_properties: {grid_position: 'GHIACB,WXEITF CQZHKX,VAHHGA'}
     data_bindings: []
+  - name: delete_button
+    properties: {text: '', icon: 'fa:trash-o', align: right, bold: true, font_size: 24}
+    type: Button
+    layout_properties: {grid_position: 'GHIACB,BKOLCK'}
+    data_bindings: []
+    event_bindings: {click: delete_button_click}
   data_bindings: []
