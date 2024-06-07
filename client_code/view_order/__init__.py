@@ -10,10 +10,14 @@ class view_order(view_orderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.cart_items = anvil.server.call('get_cart_items') or []
-  
-    for items in self.cart_items:
-        self.repeating_panel_1.items = self.cart_items
+    
+    self.load_temp_data()
+
+  def load_temp_data(self):
+    temp_products = anvil.server.call('get_temp_data')
+    
+    self.repeating_panel_1.items = temp_products
+        
 
     
 

@@ -12,7 +12,6 @@ class Product(ProductTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.cart_items = anvil.server.call('get_cart_items') or [] 
     self.counter_value = 0
     self.counter_label.text = str(self.counter_value)
 
@@ -39,10 +38,9 @@ class Product(ProductTemplate):
             'counter': self.counter_value
         }
     
-    self.cart_items.append(item_data)
+    anvil.server.call('save_temp_data', item_data)
         # Reset count after adding to cart
-    anvil.server.call('set_cart_items', self.cart_items)  
-    self.counter_value = 0
+   
     self.counter_label.text = str(self.counter_value)
     
    

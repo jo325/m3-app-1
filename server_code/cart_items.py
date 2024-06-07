@@ -3,7 +3,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-
+import anvil.users
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -17,9 +17,9 @@ import anvil.server
 #   return 42
 #
 @anvil.server.callable
-def set_cart_items(cart_items):
-  anvil.server.session['cart_items'] = cart_items
+def save_temp_data(item_data):
+    anvil.server.session['temp_products'] = item_data
 
 @anvil.server.callable
-def get_cart_items():
-  return anvil.server.session.get('cart_items')
+def get_temp_data():
+    return anvil.server.session.get('temp_products', [])

@@ -10,7 +10,7 @@ class ItemTemplate2(ItemTemplate2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    
     # Any code you write here will run before the form opens.
 
   def delete_button_click(self, **event_args):
@@ -21,6 +21,7 @@ class ItemTemplate2(ItemTemplate2Template):
 
   def set_data_bindings(self, **event_args):
         self.label_name.text = self.item['product']['name']
-        self.image_1.source = self.item['product']['imag']
-        self.label_price.text = self.item['product']['price2']
+        self.image_1.source = self.item['product']['img']
+        self.label_price.text = f"${self.item['product']['price']}"
         self.label_counter.text = str(self.item['counter_value'])
+        self.total_num.text= f"${self.item['product']['price2'] * self.item['counter_value']}"
