@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Product import Product
+
 
 class ItemTemplate2(ItemTemplate2Template):
   def __init__(self, **properties):
