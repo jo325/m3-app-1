@@ -20,8 +20,8 @@ class ItemTemplate2(ItemTemplate2Template):
     
 
   def item_event_handler(self, **event_args):
-        self.label_name.text = self.item['product']['name']
-        self.image_1.source = self.item['product']['img']
-        self.label_price.text = f"${self.item['product']['price']}"
+        self.label_name.text = self.item['name']
+        self.image_1.source = self.item['imag']
+        self.label_price.text = f"${self.item['price2']}"
         self.label_counter.text = str(self.item['counter_value'])
-        self.total_num.text= f"${self.item['product']['price2'] * self.item['counter_value']}"
+        self.total_num.text= f"${self.item['price2'] * self.item['counter_value']}"
