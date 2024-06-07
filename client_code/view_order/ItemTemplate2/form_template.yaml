@@ -12,12 +12,11 @@ components:
     properties: {height: 161.60000610351562}
     type: Image
     layout_properties: {grid_position: 'GHIACB,MWVFOV'}
-  - name: label_1
+  - name: label_name
     properties: {}
     type: Label
     layout_properties: {grid_position: 'GHIACB,WXEITF IZIOQY,MUWZQA'}
-    data_bindings:
-    - {property: text, code: 'self.item[''product''][''name'']', writeback: false}
+    data_bindings: []
   - name: total_num
     properties: {}
     type: Label
@@ -25,22 +24,20 @@ components:
     data_bindings:
     - {property: text, code: 'f"${self.item[''product''][''price2''] * self.item[''counter_value'']}"',
       writeback: false}
-  - name: label_2
+  - name: label_price
     properties: {}
     type: Label
     layout_properties: {grid_position: 'GHIACB,WXEITF XHVYOE,MECFTR'}
-    data_bindings:
-    - {property: text, code: 'f"${self.item[''product''][''price2'']} each"', writeback: false}
+    data_bindings: []
   - name: delete_button
     properties: {text: '', icon: 'fa:trash-o', align: right, bold: true, font_size: 24}
     type: Button
     layout_properties: {grid_position: 'GHIACB,WXEITF XHVYOE,HSNYIS'}
     data_bindings: []
     event_bindings: {click: delete_button_click}
-  - name: label_3
+  - name: label_counter
     properties: {}
     type: Label
     layout_properties: {grid_position: 'GHIACB,WXEITF CQZHKX,VAHHGA'}
-    data_bindings:
-    - {property: text, code: 'self.item[''counter_value'']', writeback: false}
+    data_bindings: []
   data_bindings: []

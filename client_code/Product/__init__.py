@@ -4,7 +4,8 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-cart_items = []
+from ..Product.cart_module import cart_items
+
 
 class Product(ProductTemplate):
   
@@ -39,8 +40,9 @@ class Product(ProductTemplate):
     
     cart_items.append(item_data)
         # Reset count after adding to cart
+        
     self.count = 0
-    self.counter_label.text = str(self.count)
+    self.counter_label.text = str(self.counter_value)
     
     
   

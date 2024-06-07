@@ -18,3 +18,9 @@ class ItemTemplate2(ItemTemplate2Template):
     get_open_form().view_order_link_click()
     """This method is called when the button is clicked"""
     
+
+  def set_data_bindings(self, **event_args):
+        self.label_name.text = self.item['name']
+        self.image_1.source = self.item['imag']
+        self.label_price.text = self.item['price']
+        self.label_counter.text = str(self.item['counter_value'])

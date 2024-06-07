@@ -11,7 +11,8 @@ unique_ids:
     order_system.staters: '1717683809547648122038243.4661'
     order_system.maincourse: '1717683827934431698381947.74023'
     order_system: '1717679244485219593545746.86807'
-  modules: {}
+  modules:
+    Product.cart_module: '1717732890356821709355921.3784'
   server_modules:
     add_save: '1717158848641573483162979.6547'
     register_from: '1716957460307792653357594.9224'
