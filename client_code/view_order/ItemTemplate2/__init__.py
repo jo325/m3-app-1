@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from ...Product import Product
 
 class ItemTemplate2(ItemTemplate2Template):
   def __init__(self, **properties):
@@ -20,7 +20,7 @@ class ItemTemplate2(ItemTemplate2Template):
     
 
   def set_data_bindings(self, **event_args):
-        self.label_name.text = self.item['name']
-        self.image_1.source = self.item['imag']
-        self.label_price.text = self.item['price']
+        self.label_name.text = self.item['product']['name']
+        self.image_1.source = self.item['product']['imag']
+        self.label_price.text = self.item['product']['price2']
         self.label_counter.text = str(self.item['counter_value'])

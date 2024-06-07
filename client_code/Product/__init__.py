@@ -41,7 +41,7 @@ class Product(ProductTemplate):
     cart_items.append(item_data)
         # Reset count after adding to cart
         
-    self.count = 0
+    self.counter_value = 0
     self.counter_label.text = str(self.counter_value)
     
     
