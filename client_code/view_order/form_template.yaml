@@ -18,7 +18,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'LTSVWO,FVGEAL'}
 - name: column_panel_2
-  properties: {col_widths: '{"VHDPUS":40,"VNSJIN":20,"NWWUJQ":35,"TQOQIP":5,"REFTET":20}'}
+  properties: {col_widths: '{"VHDPUS":40}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'UKOCEI,OAIBIZ'}
   components:
@@ -26,24 +26,36 @@ components:
     properties: {text: my order, bold: true, role: headline}
     type: Label
     layout_properties: {grid_position: 'IDZTZK,VHDPUS'}
-  - name: label_3
-    properties: {text: total, bold: true, role: headline, align: left}
-    type: Label
-    layout_properties: {grid_position: 'IDZTZK,VNSJIN'}
-  - name: repeating_panel_1
-    properties: {item_template: view_order.ItemTemplate2, role: null}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'GIRCYZ,NWWUJQ'}
-  - name: spacer_2
-    properties: {height: '32', spacing_above: small, visible: true}
-    type: Spacer
-    layout_properties: {grid_position: 'GIRCYZ,TQOQIP'}
-    data_bindings:
-    - {property: height, code: 'self.item['''']', writeback: false}
-  - name: column_panel_3
-    properties: {}
+  - name: column_panel_1
+    properties: {col_widths: '{"FBEGAD":10,"SUKFFK":30,"QMDSJX":20}'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'GIRCYZ,REFTET'}
+    layout_properties: {grid_position: 'KHHPGF,PDADBE'}
+    components:
+    - name: name_label
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'AHJNZV,HBXIBM'}
+    - name: price_label
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'AHJNZV,ZNDIWT'}
+    - name: total_price
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'AHJNZV,PYFQRT'}
+    - name: label_3
+      properties: {text: 'quantity :', bold: true, align: center}
+      type: Label
+      layout_properties: {grid_position: 'ERMZCM,FBEGAD'}
+    - name: quantity
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'ERMZCM,SUKFFK'}
+    - name: deleted
+      properties: {text: '', icon: 'fa:trash-o', icon_align: right_edge, align: right,
+        font_size: 25}
+      type: Button
+      layout_properties: {grid_position: 'ERMZCM,QMDSJX'}
 - name: spacer_3
   properties: {height: -126.60003662109375}
   type: Spacer
