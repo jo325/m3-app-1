@@ -30,7 +30,7 @@ class Product(ProductTemplate):
     # Save the new counter value to the database
 
   def add_button_click(self, **event_args):
-    
+    self.raise_event('x-add-to-cart', item=self.item)
     item_data = {
             'name': self.label_1,
             'image': self.image_1,
