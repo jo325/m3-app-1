@@ -1,6 +1,7 @@
 container:
   type: ColumnPanel
   properties: {col_widths: '{"HWLDLH":5,"BRVFGI":45,"LMUTTU":10}'}
+  data_bindings: []
 components:
 - name: name
   properties: {}
@@ -13,11 +14,12 @@ components:
   type: Label
   layout_properties: {grid_position: 'EYDGEW,RVKQZA'}
   data_bindings:
-  - {property: text, code: 'self.item[''Product''][''price'']', writeback: false}
+  - {property: text, code: 'f"${item[''Product''][''price'']}"', writeback: false}
 - name: label_3
   properties: {text: total price, bold: true}
   type: Label
   layout_properties: {grid_position: 'EYDGEW,MEDOYL'}
+  data_bindings: []
 - name: total_price
   properties: {}
   type: Label
@@ -31,7 +33,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'YOFURC,BRVFGI'}
   data_bindings:
-  - {property: text, code: 'self.item[counter]', writeback: false}
+  - {property: text, code: 'f"Quantity: {item[''quantity'']}"', writeback: false}
 - name: button_1
   properties: {text: '', align: full, icon: 'fa:trash', icon_align: right_edge, font_size: 25}
   type: Button
