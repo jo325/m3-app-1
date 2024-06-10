@@ -13,18 +13,12 @@ class view_order(view_orderTemplate):
     self.cart_items = []
     
 
-  def add_to_cart(self, item):
-    """Add item to cart and display"""
-    self.cart_items.append(item)
-    self.refresh_cart()
+  def add_to_cart(self, card_data):
+        self.cart_items.append(card_data)
+        self.update_cart_view()
 
-  def refresh_cart(self):
-    """Refresh the cart display"""
-    self.repeating_panel_cart.items = self.cart_items
-
-  def form_show(self, **event_args):
-    """This method is called when the form is shown on the screen"""
-    self.refresh_cart()
+  def update_cart_view(self):
+        self.view_cart_repeating_panel.items = self.cart_items
 
     
 

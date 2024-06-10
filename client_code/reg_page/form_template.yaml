@@ -9,8 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {align: center, text: Register, bold: true, italic: false, icon: 'fa:registered',
-      font_size: 27}
+    properties: {align: center, text: Register, bold: true, italic: false, icon: 'fa:registered', font_size: 27}
     type: Label
     layout_properties: {grid_position: 'VERQDR,GJDSVS', full_width_row: false, row_background: ''}
   - name: rich_text_1

@@ -41,8 +41,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'XJDROF,YVVGWX'}
   - name: decrement_button
-    properties: {text: '-', bold: true, role: filled-button, icon_align: left_edge,
-      align: center}
+    properties: {text: '-', bold: true, role: filled-button, icon_align: left_edge, align: center}
     type: Button
     layout_properties: {grid_position: 'XJDROF,OSKQXV'}
     event_bindings: {click: decrement_button_click}
@@ -52,8 +51,7 @@ components:
   layout_properties: {grid_position: 'CYDEBM,KJVMIC'}
   components:
   - name: add_button
-    properties: {text: ADD TO CART, bold: true, role: filled-button, background: 'theme:On
-        Primary Container', align: center}
+    properties: {text: ADD TO CART, bold: true, role: filled-button, background: 'theme:On Primary Container', align: center}
     type: Button
     layout_properties: {grid_position: 'LUFYOR,HTHYQK'}
     event_bindings: {click: add_button_click}

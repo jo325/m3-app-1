@@ -38,17 +38,17 @@ class Product(ProductTemplate):
 
   def add_button_click(self, **event_args):
    
-    item_data = {
+    card_data = {
             'name': self.label_1,
-            'image': self.image_1,
             'price': self.label_2,
             'counter': self.counter_value
         }
-    self.raise_event('x-add-to-cart', item=item_data)
-    anvil.server.call('save_temp_data', item_data)
-        # Reset count after adding to cart
-   
-    self.counter_label.text = str(self.counter_value)
+    self.add_to_cart(card_data)
+
+  def add_to_cart(self, card_data):
+        # This function should be implemented to store the data
+        # and update the view_cart page
+    get_open_form().add_to_cart(card_data)
     
    
     
