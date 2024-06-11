@@ -13,7 +13,7 @@ name: M3 App 1
 runtime_options:
   version: 3
   client_version: '3'
-  server_version: python3-sandbox
+  server_version: python3-full
   server_spec: null
   legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
   server_spec_disabled: {requirements: '', base: python310-minimal}
@@ -55,8 +55,8 @@ db_schema:
     client: search
     server: full
     columns:
-    - name: name
-      admin_ui: {width: 200, order: 0}
+    - name: name2
+      admin_ui: {order: 0, width: 200}
       type: string
     - name: price2
       admin_ui: {width: 200, order: 1}

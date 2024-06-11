@@ -1,21 +1,9 @@
 is_package: true
 container:
   type: ColumnPanel
-  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
+  event_bindings: {show: form_show}
 components:
-- name: name
+- name: column_panel_1
   properties: {}
-  type: Label
-  layout_properties: {grid_position: 'KICPFP,XNWNZN'}
-- name: price_l
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'KICPFP,FVHMFQ'}
-- name: quantity_l
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'BUIBIV,EBFCFL'}
-- name: total_cost
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'BUIBIV,ZNGBQF'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'QRUFZS,MHJXZC'}
