@@ -23,7 +23,7 @@ class order_system(order_systemTemplate):
 
   def view_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.navigate(self.view_link, view(items=self.view_items))
+    open_form(view(items=self.view_items))
     
   def add_to_cart(self, product, quantity):
     #if item is already in cart, just update the quantity

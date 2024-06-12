@@ -35,6 +35,7 @@ class Product(ProductTemplate):
    if self.counter_label.text:
       getform=order_system()
       getform.add_to_cart(self.item,quantity=self.counter_value)
+
       self.counter_label.text = ""
       
    else:

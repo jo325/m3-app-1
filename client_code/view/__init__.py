@@ -12,8 +12,7 @@ class view(viewTemplate):
     self.init_components(**properties)
     self.items = items
 
-    if not self.items:
-      self.empty_cart_panel.visible = True
+    
 
     
     self.repeating_panel_1.items = self.items
