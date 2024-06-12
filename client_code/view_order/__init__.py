@@ -20,9 +20,9 @@ class view_order(view_orderTemplate):
     
     def add_item_to_flow_panel(self, item):
         """Add a single item to the FlowPanel"""
-        item_label = Label(text=f"Name: {item['name']}, Price: {item['price']}, Quantity: {item['quantity']}")
-        self.info =item_label
-        self.retevie_panel_1.add_component(item_label)
+        
+        self.info = self.item["name"]
+        
     
    
       
