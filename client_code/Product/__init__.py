@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from ..view import view
 
 
 class Product(ProductTemplate):
@@ -12,7 +12,7 @@ class Product(ProductTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
+    self.view_items = []
     self.counter_value = 0
     self.counter_label.text = str(self.counter_value)
    
@@ -31,11 +31,14 @@ class Product(ProductTemplate):
     # Save the new counter value to the database
 
   def add_button_click(self, **event_args):
-   name0 = self.name2
-   price01 = self.price2.text
-   counter23 = int(self.counter_value)
+   if self.counter_label.text:
+      get_open_form().add_to_cart(self.item,quantity=self.counter_value)
+      self.counter_label.text = ""
+      
+   else:
+        self.counter_label.text = ""
+        Notification("Please specify a quantity").show()
 
-   anvil.server.call('set_item', name0, price01, counter23)
-   
+  
  
  

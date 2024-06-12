@@ -10,7 +10,7 @@ class order_system(order_systemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self.view_items = []
     # Any code you write here will run before the form opens.
 
   def maincourse_click(self, **event_args):
@@ -21,7 +21,16 @@ class order_system(order_systemTemplate):
     """This method is called when the link is clicked"""
     open_form('order_system.staters')
 
-  def view_click(self, **event_args):
+  def view_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('view_order')
+    self.navigate(view(), view(items=self.cart_items))
     
+    def add_to_cart(self, product, quantity):
+    #if item is already in cart, just update the quantity
+     for i in self.view_items:
+      if i['product'] == product:
+        i['quantity'] += quantity
+        break 
+      else:
+       self.view_items.append({'product': product, 'quantity': quantity})
+ 

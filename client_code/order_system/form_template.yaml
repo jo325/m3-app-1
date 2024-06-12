@@ -22,11 +22,11 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - name: view
+  - name: view_link
     properties: {text: view_cart, icon: 'fa:cart-arrow-down', role: selected}
     type: Link
     layout_properties: {}
-    event_bindings: {click: view_click}
+    event_bindings: {click: view_link_click}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
