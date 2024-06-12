@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from ..view import view
 
 class order_system(order_systemTemplate):
   def __init__(self, **properties):
@@ -23,9 +23,9 @@ class order_system(order_systemTemplate):
 
   def view_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.navigate(view(), view(items=self.cart_items))
+    self.navigate(self.view_link, view(items=self.view_items))
     
-    def add_to_cart(self, product, quantity):
+  def add_to_cart(self, product, quantity):
     #if item is already in cart, just update the quantity
      for i in self.view_items:
       if i['product'] == product:
