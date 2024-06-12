@@ -10,5 +10,18 @@ class view_product(view_productTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self.current_index = 0 
+   
     # Any code you write here will run before the form opens.
+
+  def form_refreshing_data_bindings(self, **event_args):
+    """This method is called when refresh_data_bindings is called"""
+    item = anvil.server.call('get_item', self.current_index)
+    if item:
+            self.name.text = item['name']
+            self.price_label.text = item['price']
+            self.quantity_label.text = item['quantity']
+            self.current_index += 1
+    else:
+            alert('No more items.')
+            self.current_index = 0

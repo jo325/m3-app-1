@@ -2,6 +2,7 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{"HWLDLH":5,"BRVFGI":45,"LMUTTU":10}'}
   data_bindings: []
+  event_bindings: {}
 components:
 - name: name
   properties: {}
