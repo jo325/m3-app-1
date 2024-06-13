@@ -4,12 +4,19 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.users
-cart = []
+
 
 @anvil.server.callable
 def add_to_cart(item):
-    cart.append(item)
+    # Check if the cart exists in the session, otherwise initialize it
+    if 'cart' not in anvil.server.session:
+        anvil.server.session['cart'] = []
+    
+    # Add the item to the cart
+    anvil.server.session['cart'].append(item)
 
 @anvil.server.callable
-def get_cart_items():
+def get_cart():
+    # Retrieve the cart from the session
+    cart = anvil.server.session.get('cart', [])
     return cart

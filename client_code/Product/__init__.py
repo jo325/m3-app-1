@@ -39,5 +39,7 @@ class Product(ProductTemplate):
     # Store the item data in the temp_storage variable
     self.temp_storage.append({"name": name, "price": price, "quantity": quantity})
     Notification("data is saved")
-    open_form('view', temp_storage=self.temp_storage)
+    item = self.temp_storage
+    anvil.server.call('add_to_cart', item)
+   
  

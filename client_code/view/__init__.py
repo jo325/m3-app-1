@@ -7,17 +7,17 @@ from anvil.tables import app_tables
 from ..view_product import view_product
 
 class view(viewTemplate):
-  def __init__(self,temp_storage=None, **properties):
+  def __init__(self, **properties):
    
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.item = temp_storage 
+    self.item = anvil.server.call('get_cart')
    
     if not self.item:
-      self.empty_cart_panel.visible = True
+      self.empty_panel_1.visible = True
       self.column_panel_2.visible = False
       
-    self.repeating_panel_1.items = self.temp_storage
+    self.repeating_panel_1.items = self.item
    
 
   def outlined_button_1_click(self, **event_args):
