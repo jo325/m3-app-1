@@ -33,8 +33,8 @@ class Product(ProductTemplate):
 
   def add_button_click(self, **event_args):
     item_to_add = {
-            'name': self.item['name2'],
-            'price': self.item['price2'],
+            'name2': self.item['name2'],
+            'price2': self.item['price2'],
             'quantity': self.counter_value
         }
     anvil.server.call('add_to_cart', item_to_add)
