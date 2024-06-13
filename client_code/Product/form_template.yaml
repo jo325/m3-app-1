@@ -1,8 +1,14 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"KJVMIC":30}'}
+  properties: {col_widths: '{"KJVMIC":30,"DXSVAC":10,"UVOVAZ":30,"XTYMSQ":20,"FHONNH":40,"MVTAKJ":20}'}
   event_bindings: {}
 components:
+- name: image_1
+  properties: {height: 89}
+  type: Image
+  layout_properties: {grid_position: 'PODPIQ,DXSVAC'}
+  data_bindings:
+  - {property: source, code: 'self.item[''imag'']', writeback: false}
 - name: name2
   properties: {bold: true, role: input-prompt, font_size: 17}
   type: Label
@@ -22,9 +28,9 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''description2'']', writeback: false}
 - name: column_panel_1
-  properties: {role: outlined-card}
+  properties: {role: outlined-card, col_widths: '{"WBTQRT":20,"YVVGWX":20,"OSKQXV":20}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'CYDEBM,DKFCYR'}
+  layout_properties: {grid_position: 'SWLCKZ,MVTAKJ'}
   components:
   - name: increment_button
     properties: {text: +, role: filled-button, bold: true, align: center}
@@ -50,4 +56,8 @@ components:
     type: Button
     layout_properties: {grid_position: 'LUFYOR,HTHYQK'}
     event_bindings: {click: add_button_click}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'GBMOQM,IFCLBK'}
 is_package: true

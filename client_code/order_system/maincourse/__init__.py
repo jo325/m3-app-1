@@ -11,7 +11,7 @@ class maincourse(maincourseTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  
     products = anvil.server.call('get_products')
     for p in products:
-      self.card_panel.add_component(Product(item=p), width='40%')
-    # Any code you write here will run before the form opens.
+      self.card_panel_2.add_component(Product(item=p))
