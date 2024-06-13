@@ -6,19 +6,18 @@ components:
   type: Label
   layout_properties: {grid_position: 'HJENTP,AKGNKI'}
   data_bindings:
-  - {property: text, code: 'self.item[''product''][''name2'']', writeback: false}
+  - {property: text, code: 'self.item[''product''][''name'']', writeback: false}
 - name: price_label
   properties: {}
   type: Label
   layout_properties: {grid_position: 'HJENTP,MYOXOZ'}
   data_bindings:
-  - {property: text, code: 'self.item[''product''][''price2''] ', writeback: false}
+  - {property: text, code: 'f"${self.item[''price'']:.2f}"', writeback: false}
 - name: quantity_value
   properties: {}
   type: Label
   layout_properties: {grid_position: 'UBEFRG,LKZLLL'}
-  data_bindings:
-  - {property: text, code: 'f"qty. {self.item[''quantity'']}"', writeback: false}
+  data_bindings: []
 - name: button_1
   properties: {text: button_1}
   type: Button

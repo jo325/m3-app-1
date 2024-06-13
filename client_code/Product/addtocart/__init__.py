@@ -14,8 +14,8 @@ class addtocart(addtocartTemplate):
     # Any code you write here will run before the form opens.
 
   def outlined_button_1_click(self, **event_args):
-     items_card{
-       name = self.name2,
-       price 
+     items_card
+     {
+       "name" : self.name2
      }
     

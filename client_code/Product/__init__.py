@@ -32,16 +32,13 @@ class Product(ProductTemplate):
     # Save the new counter value to the database
 
   def add_button_click(self, **event_args):
-   if self.counter_label.text:
-      getform=order_system()
-      getform.add_to_cart(self.item,quantity=self.counter_value)
-
-      self.counter_label.text = ""
-      
-   else:
-        self.counter_label.text = ""
-        Notification("Please specify a quantity").show()
-
+    item_to_add = {
+            'name': self.item['name2'],
+            'price': self.item['price2'],
+            'quantity': self.counter_value
+        }
+    anvil.server.call('add_to_cart', item_to_add)
+    alert(f"{self.item['name2']} added to cart!")
   
  
  
