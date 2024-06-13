@@ -13,6 +13,7 @@ components:
     properties: {text: food order place, role: outlined-button}
     type: Button
     layout_properties: {grid_position: 'WXXGVK,RXXIQR'}
+    event_bindings: {click: outlined_button_1_click}
   - name: spacer_1
     properties: {height: 133.19998168945312}
     type: Spacer
@@ -30,11 +31,24 @@ components:
     properties: {text: button_1, role: filled-button}
     type: Button
     layout_properties: {grid_position: 'IDZTZK,VJWJHZ'}
-    event_bindings: {click: button_1_click}
+    event_bindings: {}
   - name: spacer_2
     properties: {height: 44}
     type: Spacer
     layout_properties: {grid_position: 'BKROKE,WIQUAV'}
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SZPJQK,TPMGWF'}
+    components:
+    - name: cart_panel_1
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'FYRRTN,XYSNZC'}
+  - name: repeating_panel_1
+    properties: {item_template: view.ItemTemplate1}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'BEHSFO,NNJRSE'}
 - name: spacer_3
   properties: {height: -126.60003662109375}
   type: Spacer

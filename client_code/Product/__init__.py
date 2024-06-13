@@ -4,8 +4,8 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..view import view
-from ..order_system import order_system
+
+
 
 
 class Product(ProductTemplate):
@@ -16,7 +16,7 @@ class Product(ProductTemplate):
   
     self.counter_value = 0
     self.counter_label.text = str(self.counter_value)
-   
+    self.temp_storage = [] 
   
     # Any code you write here will run before the form opens.
 
@@ -32,13 +32,12 @@ class Product(ProductTemplate):
     # Save the new counter value to the database
 
   def add_button_click(self, **event_args):
-    item_to_add = {
-            'name2': self.item['name2'],
-            'price2': self.item['price2'],
-            'quantity': self.counter_value
-        }
-    anvil.server.call('add_to_cart', item_to_add)
-    alert(f"{self.item['name2']} added to cart!")
-  
- 
+    name = self.name2.text
+    price = self.price2.text
+    quantity = self.counter_value.numerator
+    
+    # Store the item data in the temp_storage variable
+    self.temp_storage.append({"name": name, "price": price, "quantity": quantity})
+    Notification("data is saved")
+    open_form('view', temp_storage=self.temp_storage)
  
