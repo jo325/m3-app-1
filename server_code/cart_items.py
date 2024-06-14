@@ -4,7 +4,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.users
-
+from anvil.server import session, callable
 
 @anvil.server.callable
 def add_to_cart(name,price,quantity):
@@ -20,3 +20,10 @@ def get_cart():
     # Retrieve the cart from the session
     cart = anvil.server.session.get('cart', [])
     return cart
+
+
+@anvil.server.callable
+def clear_items():
+    """Clear all items from the session"""
+    if 'cart' in session:
+        del session['cart']

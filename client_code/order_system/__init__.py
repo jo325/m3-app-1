@@ -25,12 +25,4 @@ class order_system(order_systemTemplate):
     """This method is called when the link is clicked"""
     open_form(view(items=self.view_items))
     
-  def add_to_cart(self, product, quantity):
-    #if item is already in cart, just update the quantity
-     for i in self.view_items:
-      if i['product'] == product:
-        i['quantity'] += quantity
-        break 
-      else:
-       self.view_items.append({'product': product, 'quantity': quantity})
- 
+  

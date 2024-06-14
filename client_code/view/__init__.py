@@ -8,7 +8,6 @@ from ..view_product import view_product
 
 class view(viewTemplate):
   def __init__(self, **properties):
-   
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.item = anvil.server.call('get_cart')
@@ -16,7 +15,7 @@ class view(viewTemplate):
     if not self.item:
       self.empty_panel_1.visible = True
       self.column_panel_2.visible = False
-      
+
     self.repeating_panel_1.items = self.item
    
 
@@ -24,6 +23,10 @@ class view(viewTemplate):
     """This method is called when the button is clicked"""
     open_form("order_system")
 
+  def outlined_button_2_click(self, **event_args):
+    anvil.server.call('clear_items')
+    self.repeating_panel_1.clear()
+    
   
 
   
