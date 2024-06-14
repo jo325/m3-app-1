@@ -39,7 +39,6 @@ class Product(ProductTemplate):
     # Store the item data in the temp_storage variable
     self.temp_storage.append({"name": name, "price": price, "quantity": quantity})
     Notification("data is saved")
-    item = self.temp_storage
-    anvil.server.call(
-   
+    item = self.temp_storag
+    
  
