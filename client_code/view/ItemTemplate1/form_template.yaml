@@ -28,6 +28,8 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'CWGBWF,JMLTAS'}
+    data_bindings:
+    - {property: text, code: self.label_2*self.label_3, writeback: false}
   - name: button_1
     properties: {text: button_1}
     type: Button

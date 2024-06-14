@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..view import view
+
 
 
 
@@ -35,10 +35,7 @@ class Product(ProductTemplate):
     name = self.name2.text
     price = self.price2.text
     quantity = self.counter_value.numerator
-    
-    # Store the item data in the temp_storage variable
-    self.temp_storage.append({"name": name, "price": price, "quantity": quantity})
     Notification("data is saved")
-    item = self.temp_storag
+    anvil.server.call('add_to_cart', name, price, quantity)
     
  
