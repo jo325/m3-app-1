@@ -23,7 +23,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'CWGBWF,PYDMKC KEQFFB,AIYVKB'}
     data_bindings:
-    - {property: text, code: ' self.item[''quantity'']', writeback: false}
+    - {property: text, code: ' f"Quantity {self.item[''quantity'']}"', writeback: false}
   - name: delete
     properties: {text: '', icon: 'fa:trash', role: filled-button}
     type: Button
