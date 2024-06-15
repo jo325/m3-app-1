@@ -28,3 +28,4 @@ components:
     properties: {text: '', icon: 'fa:trash', role: filled-button}
     type: Button
     layout_properties: {grid_position: 'CWGBWF,OCARNQ'}
+    event_bindings: {click: delete_click}
