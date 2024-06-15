@@ -3,6 +3,10 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
 - type: ColumnPanel
   properties: {col_spacing: medium}
   name: content_panel
@@ -11,11 +15,15 @@ components:
   - name: label_1
     properties: {align: center, bold: true, text: Login, icon: 'fa:cloud', font_size: 30}
     type: Label
-    layout_properties: {grid_position: 'QZBHPK,RQSBNM'}
+    layout_properties: {grid_position: 'FAGVPA,BOXDVD'}
+  - name: spacer_1_copy
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YFUJSE,RLTDIJ'}
   - name: rich_text_1
-    properties: {content: '*username/email', align: left}
+    properties: {content: Username/Email, align: left}
     type: RichText
-    layout_properties: {grid_position: 'ABGTAZ,JHVTRO'}
+    layout_properties: {grid_position: 'YFUJSE,BVSLCA ABGTAZ,JHVTRO'}
     components:
     - name: username_or_email_textbox
       properties: {}
@@ -24,18 +32,34 @@ components:
   - name: rich_text_2
     properties: {content: '*password'}
     type: RichText
-    layout_properties: {grid_position: 'WAPITW,KCTXZC'}
+    layout_properties: {grid_position: 'YFUJSE,BVSLCA WAPITW,KCTXZC'}
     components:
     - name: password_textbox
       properties: {visible: true}
       type: TextBox
       layout_properties: {width: 918.7999267578125}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YFUJSE,ZDUGIR'}
   - name: login
     properties: {text: login, role: outlined-button, icon: 'fa:arrow-right', icon_align: right}
     type: Button
-    layout_properties: {grid_position: 'ZJZZAT,WCVYVF'}
+    layout_properties: {grid_position: 'YFUJSE,BVSLCA ZJZZAT,WCVYVF'}
     event_bindings: {click: login_click}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+- name: label_2
+  properties: {text: RESTAURANT}
+  type: Label
+  layout_properties: {slot: title}
+- name: image_1_copy
+  properties: {source: _/theme/pngegg.png, height: 47.181793212890625}
+  type: Image
+  layout_properties: {slot: default}
+- name: label_2_copy
+  properties: {text: RESTAURANT}
+  type: Label
+  layout_properties: {slot: default}
+- name: image_1
+  properties: {source: _/theme/pngegg.png, height: 47.181793212890625}
+  type: Image
+  layout_properties: {slot: top-left-btn}

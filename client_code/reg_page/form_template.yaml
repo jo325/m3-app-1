@@ -11,34 +11,38 @@ components:
   - name: label_1
     properties: {align: center, text: Register, bold: true, italic: false, icon: 'fa:registered', font_size: 27}
     type: Label
-    layout_properties: {grid_position: 'VERQDR,GJDSVS', full_width_row: false, row_background: ''}
+    layout_properties: {grid_position: 'POWDFQ,GDCPUD'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'OVKYOB,HEPBHH'}
   - name: rich_text_1
-    properties: {content: '*Username', visible: true}
+    properties: {content: Username, visible: true}
     type: RichText
-    layout_properties: {grid_position: 'VRKKKV,MPMNFM'}
+    layout_properties: {grid_position: 'KNNUXF,MUKNLI VRKKKV,MPMNFM'}
     components:
     - name: Username_box
-      properties: {align: left, role: outlined-error, hide_text: false, placeholder: '-'}
+      properties: {align: left, role: outlined-error, hide_text: false, placeholder: Enter here, enabled: false}
       type: TextBox
       layout_properties: {width: 710.7999267578125}
       data_bindings:
       - {property: tag, code: 'self.item[''username'']', writeback: false}
   - name: rich_text_2
-    properties: {content: '*email id'}
+    properties: {content: Email Id}
     type: RichText
-    layout_properties: {grid_position: 'IAOVQL,WDZRXM'}
+    layout_properties: {grid_position: 'KNNUXF,MUKNLI IAOVQL,WDZRXM'}
     components:
     - name: email_box
-      properties: {role: outlined, type: email, placeholder: '-'}
+      properties: {role: outlined, type: email, placeholder: Enter here}
       type: TextBox
       layout_properties: {width: 711.199951171875}
   - name: rich_text_3
-    properties: {content: '*passward'}
+    properties: {content: Password}
     type: RichText
-    layout_properties: {grid_position: 'THGAPF,JYFUSF'}
+    layout_properties: {grid_position: 'KNNUXF,MUKNLI THGAPF,JYFUSF'}
     components:
     - name: password_box
-      properties: {role: outlined, placeholder: '-'}
+      properties: {role: outlined, placeholder: Enter here}
       type: TextBox
       layout_properties: {width: 710.5999755859375}
   - name: register
@@ -48,14 +52,26 @@ components:
       role: [elevated-button, tonal-button]
       icon: fa:angle-double-right
     type: Button
-    layout_properties: {grid_position: 'PGQUAV,WXQEXE'}
+    layout_properties: {grid_position: 'KNNUXF,MUKNLI PGQUAV,WXQEXE'}
     event_bindings: {click: register_click}
+  - name: image_2
+    properties: {height: 317.818115234375, source: _/theme/restaurant.jpeg}
+    type: Image
+    layout_properties: {grid_position: 'KNNUXF,JDACMS'}
   - name: login_s
-    properties: {text: login}
+    properties: {text: login, role: outlined-button}
     type: Button
-    layout_properties: {grid_position: 'PGQUAV,TRPLKE'}
+    layout_properties: {grid_position: 'KNNUXF,MUKNLI PGQUAV,TRPLKE'}
     event_bindings: {click: login_s_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: image_1
+  properties: {source: _/theme/pngegg.png, height: 47.181793212890625}
+  type: Image
+  layout_properties: {slot: top-left-btn}
+- name: label_2
+  properties: {text: RESTAURANT}
+  type: Label
+  layout_properties: {slot: title}
