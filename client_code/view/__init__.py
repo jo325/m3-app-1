@@ -25,7 +25,7 @@ class view(viewTemplate):
 
   def outlined_button_2_click(self, **event_args):
     anvil.server.call('clear_items')
-    self.repeating_panel_1.clear()
+   
     
   
 
