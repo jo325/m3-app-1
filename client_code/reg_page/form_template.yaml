@@ -9,9 +9,11 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {align: center, text: Register, bold: true, italic: false, icon: 'fa:registered', font_size: 27}
+    properties: {align: center, text: Register, bold: true, italic: false, icon: '', font_size: 27}
     type: Label
     layout_properties: {grid_position: 'POWDFQ,GDCPUD'}
+    data_bindings:
+    - {property: text, code: '', writeback: false}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
@@ -47,10 +49,11 @@ components:
       layout_properties: {width: 710.5999755859375}
   - name: register
     properties:
-      text: register
+      text: |
+        Register
       bold: true
       role: [elevated-button, tonal-button]
-      icon: fa:angle-double-right
+      icon: ''
     type: Button
     layout_properties: {grid_position: 'KNNUXF,MUKNLI PGQUAV,WXQEXE'}
     event_bindings: {click: register_click}
