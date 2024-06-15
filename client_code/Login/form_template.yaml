@@ -51,14 +51,6 @@ components:
   properties: {text: RESTAURANT}
   type: Label
   layout_properties: {slot: title}
-- name: image_1_copy
-  properties: {source: _/theme/pngegg.png, height: 47.181793212890625}
-  type: Image
-  layout_properties: {slot: default}
-- name: label_2_copy
-  properties: {text: RESTAURANT}
-  type: Label
-  layout_properties: {slot: default}
 - name: image_1
   properties: {source: _/theme/pngegg.png, height: 47.181793212890625}
   type: Image
