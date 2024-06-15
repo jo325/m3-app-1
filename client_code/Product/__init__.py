@@ -23,6 +23,7 @@ class Product(ProductTemplate):
   def increment_button_click(self, **event_args):
     self.counter_value += 1
     self.counter_label.text = str(self.counter_value)
+    
     # Save the new counter value to the database
 
   
