@@ -11,19 +11,19 @@ components:
     type: Label
     layout_properties: {grid_position: 'CWGBWF,PYDMKC EIQSBX,RFYSNM'}
     data_bindings:
-    - {property: text, code: 'self.item[''product''][''name2'']', writeback: false}
+    - {property: text, code: 'self.item[''name'']', writeback: false}
   - name: label_2
     properties: {}
     type: Label
     layout_properties: {grid_position: 'CWGBWF,PYDMKC EIQSBX,IJHLIQ'}
     data_bindings:
-    - {property: text, code: ' f" Rs. {self.item[''product''][''price2'']}"', writeback: false}
+    - {property: text, code: ' f" Rs. {self.item[''price'']}"', writeback: false}
   - name: label_3
     properties: {}
     type: Label
     layout_properties: {grid_position: 'CWGBWF,PYDMKC KEQFFB,AIYVKB'}
     data_bindings:
-    - {property: text, code: ' f"Quantity {self.item[''product''][''quantity'']}"', writeback: false}
+    - {property: text, code: ' f"Quantity {self.item[''quantity'']}"', writeback: false}
   - name: delete
     properties: {text: '', icon: 'fa:trash', role: filled-button}
     type: Button

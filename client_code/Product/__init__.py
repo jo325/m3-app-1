@@ -34,7 +34,7 @@ class Product(ProductTemplate):
   def add_button_click(self, **event_args):
     
     name = self.name2.text
-    price = self.price2.numerator
+    price = self.price2.text
     quantity = self.counter_value.numerator
     items = self.item
     Notification("data is saved")
