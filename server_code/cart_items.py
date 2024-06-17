@@ -27,3 +27,5 @@ def clear_items():
     """Clear all items from the session"""
     if 'cart' in session:
         del session['cart']
+
+
