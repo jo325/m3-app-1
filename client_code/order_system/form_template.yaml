@@ -42,6 +42,10 @@ components:
     type: Link
     layout_properties: {grid_position: 'UMROSY,MCZTTW'}
     event_bindings: {click: stater_click}
+  - name: link_1
+    properties: {text: BEVERAGES, role: null}
+    type: Link
+    layout_properties: {grid_position: 'LGOWZU,ZTONOO'}
 - name: label_1
   properties: {text: restaurant order, bold: true}
   type: Label
