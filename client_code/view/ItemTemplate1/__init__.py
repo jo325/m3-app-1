@@ -14,5 +14,4 @@ class ItemTemplate1(ItemTemplate1Template):
     # Any code you write here will run before the form opens.
 
   def delete_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    self.remove_from_parent(self.item) 
