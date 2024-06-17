@@ -20,7 +20,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'PODPIQ,XTYMSQ'}
   data_bindings:
-  - {property: text, code: 'f"${self.item[''price2'']}"', writeback: false}
+  - {property: text, code: 'f"Rs. {self.item[''price2'']}"', writeback: false}
 - name: dec2
   properties: {}
   type: Label
