@@ -12,7 +12,7 @@ class order_system(order_systemTemplate):
     self.init_components(**properties)
     self.view_items = []
     # Any code you write here will run before the form opens.
-
+    self.repeating_panel_1.items = self.item
   def maincourse_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('order_system.maincourse')
@@ -23,6 +23,6 @@ class order_system(order_systemTemplate):
 
   def view_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form(view(items=self.view_items))
+    open_form("view")
     
   
