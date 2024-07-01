@@ -11,24 +11,8 @@ class order_system(order_systemTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    self.cart_items = self.get_cart_items()
-
-  def get_cart_items(self):
-        # Fetch the cart items from the server
-        return anvil.server.call('get_cart')
-
-  def build_cart(self):
-       
-        self.cart_grid (
-            columns=[
-                {"title": "Item", "key": "name"},
-                {"title": "Price", "key": "price"},
-                {"title": "Quantity", "key": "quantity"}
-            ],
-            rows=self.cart_items
-        )
-        self.cart_panel.add_component(self.cart_grid)
-        return self.cart_panel
+    self.item = anvil.server.call('get_cart')
+    self.repeating_panel_4.items = self.item
    
   def maincourse_click(self, **event_args):
     """This method is called when the link is clicked"""
