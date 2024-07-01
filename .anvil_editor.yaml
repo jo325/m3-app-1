@@ -2,6 +2,7 @@ unique_ids:
   forms:
     view.ItemTemplate1: '1718295174413518474385942.9184'
     Product: '1717479439489549353983906.3937'
+    order_system.RowTemplate1: '1719806864904993063854410.9604'
     Login: '1716955596115424285044459.64087'
     main.Form2: '1717158185645644505696748.3389'
     reg_page: S2JD6LTNCBJX6RVJBZVQQ25AQRR3GVWI
@@ -10,7 +11,6 @@ unique_ids:
     order_system.staters: '1717683809547648122038243.4661'
     order_system.maincourse: '1717683827934431698381947.74023'
     order_system: '1717679244485219593545746.86807'
-    order_system.ItemTemplate2: '1719403793297446269987011.36224'
     view: '1717587503543473665264772.41156'
   modules: {}
   server_modules:
