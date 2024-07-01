@@ -10,7 +10,6 @@ class order_system(order_systemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.item = anvil.server.call('get_cart')
     # Any code you write here will run before the form opens.
     self.cart_items = self.get_cart_items()
 
@@ -19,8 +18,8 @@ class order_system(order_systemTemplate):
         return anvil.server.call('get_cart')
 
   def build_cart(self):
-        self.cart_panel = anvil.Panel()
-        self.cart_grid = anvil.DataGrid(
+       
+        self.cart_grid (
             columns=[
                 {"title": "Item", "key": "name"},
                 {"title": "Price", "key": "price"},
