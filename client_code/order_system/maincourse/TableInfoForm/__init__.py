@@ -21,4 +21,5 @@ class TableInfoForm(TableInfoFormTemplate):
 
         # Return the values and close the dialog
     return (table_no, date, time)
+    anvil.server.call('add_to_cart',table_no, date ,time)
     

@@ -37,7 +37,7 @@ class Product(ProductTemplate):
     name = self.name2.text
     price = self.price2.text
     quantity = self.counter_value.numerator
-    items = self.item
-    anvil.server.call('add_to_cart',items, name ,price, quantity)
+   
+    anvil.server.call('add_to_cart',name ,price, quantity)
     
  

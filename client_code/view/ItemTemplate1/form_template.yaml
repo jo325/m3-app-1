@@ -2,7 +2,7 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: outlined_card_1
-  properties: {role: outlined-card}
+  properties: {role: outlined-card, col_widths: '{"PYDMKC":30,"TTEUGD":15,"OCARNQ":15}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'JAKJYO,EKVCZS'}
   components:
@@ -24,6 +24,24 @@ components:
     layout_properties: {grid_position: 'CWGBWF,PYDMKC KEQFFB,AIYVKB'}
     data_bindings:
     - {property: text, code: ' f"Quantity {self.item[''quantity'']}"', writeback: false}
+  - name: label_4
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CWGBWF,PYDMKC KEQFFB,HJCPHL'}
+    data_bindings:
+    - {property: text, code: 'self.item[''date'']', writeback: false}
+  - name: label_6
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CWGBWF,PYDMKC KEQFFB,NZZZDH'}
+    data_bindings:
+    - {property: text, code: 'self.item[''time'']', writeback: false}
+  - name: label_5
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CWGBWF,TTEUGD'}
+    data_bindings:
+    - {property: text, code: 'self.item[''table_no'']', writeback: false}
   - name: delete
     properties: {text: '', icon: 'fa:trash', role: filled-button, bold: false}
     type: Button
