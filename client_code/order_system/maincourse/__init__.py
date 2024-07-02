@@ -15,3 +15,5 @@ class maincourse(maincourseTemplate):
     products = anvil.server.call('get_products')
     for p in products:
       self.card_panel_2.add_component(Product(item=p))
+
+  
