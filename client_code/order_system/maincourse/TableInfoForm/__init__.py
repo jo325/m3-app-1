@@ -21,3 +21,4 @@ class TableInfoForm(TableInfoFormTemplate):
 
         # Return the values and close the dialog
     return (table_no, date, time)
+    

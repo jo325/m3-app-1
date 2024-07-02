@@ -38,7 +38,6 @@ class Product(ProductTemplate):
     price = self.price2.text
     quantity = self.counter_value.numerator
     items = self.item
-    Notification("data is saved")
     anvil.server.call('add_to_cart',items, name ,price, quantity)
     
  
