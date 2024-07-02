@@ -7,13 +7,13 @@ import anvil.users
 from anvil.server import session, callable
 
 @anvil.server.callable
-def add_to_cart(items,name,price,quantity):
+def add_to_cart(table_no,date,name,price,quantity):
     # Check if the cart exists in the session, otherwise initialize it
     if 'cart' not in anvil.server.session:
         anvil.server.session['cart'] = []
     
     # Add the item to the cart
-    anvil.server.session['cart'].append({"product": items,"name":name ,"price": price, "quantity": quantity})
+    anvil.server.session['cart'].append({"table_no":table_no,"date":date,"time","name":name ,"price": price, "quantity": quantity})
 
 @anvil.server.callable
 def get_cart():
