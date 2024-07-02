@@ -1,0 +1,46 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"TZVWXD":15,"SWOHMQ":45,"MGAPTN":10,"OTQTNZ":25,"MDIEKW":10,"WRVYYA":15}'}
+components:
+- name: label_1
+  properties: {text: 'Table No:', bold: true}
+  type: Label
+  layout_properties: {grid_position: 'RDMZPP,TZVWXD'}
+- name: table_no
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'RDMZPP,SWOHMQ'}
+- name: spacer_3
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RDMZPP,JSGZAN'}
+- name: label_3
+  properties: {text: Date, align: center, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'ZPAFLG,MGAPTN'}
+- name: date_picker_1
+  properties: {}
+  type: DatePicker
+  layout_properties: {grid_position: 'ZPAFLG,OTQTNZ'}
+- name: label_2
+  properties: {text: time, align: right, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'ZPAFLG,MDIEKW'}
+- name: time_no
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'ZPAFLG,WRVYYA'}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'TYZHZU,OXTTUU'}
+- name: submit
+  properties: {role: outlined, placeholder: Submit, bold: true, align: center, background: 'theme:Primary'}
+  type: TextBox
+  layout_properties: {grid_position: 'TYZHZU,PRLIWS'}
+  event_bindings: {pressed_enter: submit_pressed_enter}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'TYZHZU,ABSJXD'}
+is_package: true

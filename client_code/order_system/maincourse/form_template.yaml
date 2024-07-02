@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: column_panel_2
-      properties: {}
+      properties: {col_widths: '{"IRDFCK":25,"DDOMED":35,"GURXTI":20}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'VUSEVZ,DASSPM'}
       components:
@@ -37,3 +37,16 @@ components_by_slot:
         properties: {height: 32}
         type: Spacer
         layout_properties: {grid_position: 'VEMNCG,LLZSKE'}
+      - name: spacer_4
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'LDXQLS,IRDFCK'}
+      - name: placed_order
+        properties: {text: placed order, role: filled-button}
+        type: Button
+        layout_properties: {grid_position: 'LDXQLS,DDOMED'}
+        event_bindings: {click: placed_order_click}
+      - name: spacer_5
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'LDXQLS,GURXTI'}
