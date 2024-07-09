@@ -20,11 +20,4 @@ class maincourse(maincourseTemplate):
   def placed_order_click(self, **event_args):
     """This method is called when the button is clicked"""
     dialog = TableInfoForm()
-    result = alert(dialog, buttons=[])
-
-        # Check if the result is not None (if the dialog was closed without submitting, result will be None)
-    if result:
-         table_no, date, time = result
-         self.lbl_info.text = f"Table No: {table_no}, Date: {date}, Time: {time}"
-
-  
+    alert(dialog, buttons=[])

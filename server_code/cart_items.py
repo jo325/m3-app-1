@@ -7,13 +7,13 @@ import anvil.users
 from anvil.server import session, callable
 
 @anvil.server.callable
-def add_to_cart(table_no,date,time,name,price,quantity):
+def add_to_cart(name,price,quantity):
     # Check if the cart exists in the session, otherwise initialize it
     if 'cart' not in anvil.server.session:
         anvil.server.session['cart'] = []
     
     # Add the item to the cart
-    anvil.server.session['cart'].append({"table_no":table_no,"date":date,"time":time,"name":name ,"price": price, "quantity": quantity})
+    anvil.server.session['cart'].append({"name":name ,"price": price, "quantity": quantity})
 
 @anvil.server.callable
 def get_cart():
@@ -29,3 +29,20 @@ def clear_items():
         del session['cart']
 
 
+@anvil.server.callable
+def add_to_cart_1(table_no,date,time):
+    # Check if the cart exists in the session, otherwise initialize it
+   name = anvil.server.session.get('cart', ["name"])
+   quantity = anvil.server.session.get('cart', ["quantity"]) 
+   price = anvil.server.session.get('cart', ["price"])
+   if 'card' not in anvil.server.session:
+        anvil.server.session['card'] = []
+    
+    # Add the item to the cart
+   anvil.server.session['card'].append({"table_no":table_no,"date":date,"time":time,"name":name ,"price": price, "quantity": quantity})
+
+@anvil.server.callable
+def get_cart_1():
+    # Retrieve the cart from the session
+    card = anvil.server.session.get('card', [])
+    return card

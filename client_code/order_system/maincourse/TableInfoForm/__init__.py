@@ -13,13 +13,16 @@ class TableInfoForm(TableInfoFormTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def submit_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
+  def button_1_click(self, **event_args):
+    
+    """This method is called when the button is clicked"""
     table_no = self.table_no.text
     date = self.date_picker_1.date
     time = self.time_no.text
 
         # Return the values and close the dialog
-    return (table_no, date, time)
-    anvil.server.call('add_to_cart',table_no, date ,time)
+    
+    anvil.server.call('add_to_cart_1',table_no, date ,time)
+    open_form('order_system.maincourse')
+   
     

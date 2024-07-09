@@ -30,17 +30,9 @@ components:
   properties: {}
   type: TextBox
   layout_properties: {grid_position: 'ZPAFLG,WRVYYA'}
-- name: spacer_2
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'TYZHZU,OXTTUU'}
-- name: submit
-  properties: {role: outlined, placeholder: '', bold: true, align: center, background: 'theme:Primary', text: Submit}
-  type: TextBox
-  layout_properties: {grid_position: 'TYZHZU,PRLIWS'}
-  event_bindings: {pressed_enter: submit_pressed_enter}
-- name: spacer_1
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'TYZHZU,ABSJXD'}
+- name: button_1
+  properties: {text: submit, role: filled-button, icon: 'fa:500px'}
+  type: Button
+  layout_properties: {grid_position: 'ZDXTAP,VWUOBN'}
+  event_bindings: {click: button_1_click}
 is_package: true

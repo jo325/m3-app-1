@@ -10,8 +10,20 @@ class view(viewTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.item = anvil.server.call('get_cart')
-   
+    self.item = anvil.server.call('get_cart_1')
+    self.show_card(self.item)
+
+  def show_card(self,item):
+    if item:
+     self.name_tag.text = item["name"]
+     self.quantity_tag.text = item["quantity"]
+     self.price_tag.text = item["price"]
+
+    self.table_tag.text = item["table_no"]
+      
+
+
+    
     if not self.item:
       self.empty_panel_1.visible = True
       self.column_panel_2.visible = False
